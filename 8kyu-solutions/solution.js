@@ -48,3 +48,15 @@ const hero = (bullets, dragons) => {
   }
   return false;
 };
+
+// 6. Square(n) Sum
+
+function squareSum(numbers) {
+  const squareItem = (item) => item ** 2;
+  let newNumbers = numbers.map(squareItem);
+  let totalSum = 0;
+  for (let i = 0; i < newNumbers.length; i++) {
+    totalSum += newNumbers[i];
+  }
+  return totalSum;
+}

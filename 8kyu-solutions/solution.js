@@ -26,7 +26,7 @@ const bmi = (weight, height) => {
 // 3. Vowel remover
 const shortcut = (string) => string.replace(/[aeiou]/g, '');
 
-// 4 Student's Final Grade
+// 4. Student's Final Grade
 const finalGrade = (exam, projects) => {
   if (exam > 90 || projects > 10) {
     return 100;
@@ -37,4 +37,14 @@ const finalGrade = (exam, projects) => {
   } else {
     return 0;
   }
+};
+
+// 5. Is He gonna survive
+
+const hero = (bullets, dragons) => {
+  let dragonBullets = dragons * 2;
+  if (bullets >= dragonBullets) {
+    return true;
+  }
+  return false;
 };

@@ -60,3 +60,13 @@ function squareSum(numbers) {
   }
   return totalSum;
 }
+
+// 7. String repeat
+const repeatStr = (n, s) => {
+  let result = '';
+  while (n > 0) {
+    result += s;
+    n--;
+  }
+  return result;
+};

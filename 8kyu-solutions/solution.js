@@ -22,3 +22,6 @@ const bmi = (weight, height) => {
     return 'Obese';
   }
 };
+
+// 3. Vowel remover
+const shortcut = (string) => string.replace(/[aeiou]/g, '');

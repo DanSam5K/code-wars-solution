@@ -73,3 +73,8 @@ const repeatStr = (n, s) => {
 
 // 8. Find a reminder
 const remainder = (a, b) => (a > b ? a % b : b % a);
+
+function remainderT(a, b) {
+  if (a >= b) return a % b;
+  else if (a < b) return b % a;
+}

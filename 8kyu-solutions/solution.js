@@ -70,3 +70,6 @@ const repeatStr = (n, s) => {
   }
   return result;
 };
+
+// 8. Find a reminder
+const remainder = (a, b) => (a > b ? a % b : b % a);

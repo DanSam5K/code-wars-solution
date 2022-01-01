@@ -78,3 +78,7 @@ function remainderT(a, b) {
   if (a >= b) return a % b;
   else if (a < b) return b % a;
 }
+
+//  9. Twice as old
+const twiceAsOld = (dadYearsOld, sonYearsOld) =>
+  Math.abs(sonYearsOld * 2 - dadYearsOld);

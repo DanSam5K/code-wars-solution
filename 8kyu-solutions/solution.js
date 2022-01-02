@@ -82,3 +82,6 @@ function remainderT(a, b) {
 //  9. Twice as old
 const twiceAsOld = (dadYearsOld, sonYearsOld) =>
   Math.abs(sonYearsOld * 2 - dadYearsOld);
+
+// 10. Sheep DNA to RNA conversion
+const DNAtoRNA = (dna) => dna.replace(/T/g, 'U');

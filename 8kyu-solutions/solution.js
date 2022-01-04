@@ -88,3 +88,6 @@ const DNAtoRNA = (dna) => dna.replace(/T/g, 'U');
 
 // 11. GrassHoper Check for factor
 const checkForFactor = (base, factor) => (base % factor === 0 ? true : false);
+
+// 12. Quarter of the year
+const quarterOf = (month) => Math.ceil(month / 3);

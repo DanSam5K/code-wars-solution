@@ -91,3 +91,14 @@ const checkForFactor = (base, factor) => (base % factor === 0 ? true : false);
 
 // 12. Quarter of the year
 const quarterOf = (month) => Math.ceil(month / 3);
+
+// 13. Counting Sheep
+
+function countSheeps(arrayOfSheep) {
+  // TODO May the force be with you
+  let counts = 0;
+  for (let i = 0; i < arrayOfSheep.length; i++) {
+    if (arrayOfSheep[i]) counts += 1;
+  }
+  return counts;
+}

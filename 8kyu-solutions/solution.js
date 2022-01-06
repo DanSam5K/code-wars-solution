@@ -102,16 +102,7 @@ function countSheeps(arrayOfSheep) {
   }
   return counts;
 }
-//
-function countSheeps(arrayOfSheep) {
-  // TODO May the force be with you
-  let counts = 0;
-  for (let i = 0; i < arrayOfSheep.length; i++) {
-    if (arrayOfSheep[i]) counts += 1;
-  }
-  return counts;
-}
+// 14. Duty free
 
-
-
-
+const dutyFree = (normPrice, discount, hol) =>
+  Math.floor(hol / ((normPrice * discount) / 100));

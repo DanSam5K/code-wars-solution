@@ -106,3 +106,7 @@ function countSheeps(arrayOfSheep) {
 
 const dutyFree = (normPrice, discount, hol) =>
   Math.floor(hol / ((normPrice * discount) / 100));
+
+// 15. My head is at the wrong end
+
+const fixTheMeerkat = (arr) => arr.reverse();

@@ -110,3 +110,9 @@ const dutyFree = (normPrice, discount, hol) =>
 // 15. My head is at the wrong end
 
 const fixTheMeerkat = (arr) => arr.reverse();
+
+// 16 Regex Basics
+
+String.prototype.digit = function () {
+  return /^[0-9]$/.test(this);
+};

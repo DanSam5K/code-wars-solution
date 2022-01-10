@@ -111,8 +111,12 @@ const dutyFree = (normPrice, discount, hol) =>
 
 const fixTheMeerkat = (arr) => arr.reverse();
 
-// 16 Regex Basics
+// 16. Regex Basics
 
 String.prototype.digit = function () {
   return /^[0-9]$/.test(this);
 };
+
+// 17. Point of reflection
+
+const symmetricPoint = (p, q) => [2 * q[0] - p[0], 2 * q[1] - p[1]];

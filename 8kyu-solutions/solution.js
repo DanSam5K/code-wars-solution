@@ -122,9 +122,25 @@ String.prototype.digit = function () {
 const symmetricPoint = (p, q) => [2 * q[0] - p[0], 2 * q[1] - p[1]];
 
 // 18. Fake Binary
-function fakeBin(x){
-  let chars = {'0':'0','1':'0','2':'0','3':'0', '4':'0','5':'1','6':'1','7':'1','8':'1','9':'1'};
-   x = x.replace(/[0-9]/g, m => chars[m]);
-  return x
+function fakeBin(x) {
+  let chars = {
+    0: '0',
+    1: '0',
+    2: '0',
+    3: '0',
+    4: '0',
+    5: '1',
+    6: '1',
+    7: '1',
+    8: '1',
+    9: '1',
+  };
+  x = x.replace(/[0-9]/g, (m) => chars[m]);
+  return x;
 }
 
+function fakeBin2(x) {
+  return x.replace(/[0-4]/g, '0').replace(/[5-9]/g, '1');
+}
+
+// 19.

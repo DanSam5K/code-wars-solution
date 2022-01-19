@@ -144,3 +144,7 @@ function fakeBin2(x) {
 }
 
 // 19.
+
+function fakeBin2(x) {
+  return x.replace(/[0-4]/g, '0').replace(/[5-9]/g, '1');
+}

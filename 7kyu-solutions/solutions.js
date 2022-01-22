@@ -17,3 +17,5 @@ function tennisGamePoints(score) {
   }
   return p1 + p2;
 }
+
+// 2

@@ -18,4 +18,24 @@ function tennisGamePoints(score) {
   return p1 + p2;
 }
 
-// 2
+// 2. Scaling Squared Strings
+function scale(strng, k, n) {
+  // your code
+  if (strng === '') return '';
+  let arr = strng.split('\n');
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    let word = '';
+    for (let j = 0; j < arr[i].length; j++) {
+      word += arr[i][j].repeat(k);
+    }
+    newArr.push(word);
+  }
+  let newArr2 = [];
+  for (let i = 0; i < newArr.length; i++) {
+    for (let j = 0; j < n; j++) {
+      newArr2.push(newArr[i]);
+    }
+  }
+  return newArr2.join('\n');
+}

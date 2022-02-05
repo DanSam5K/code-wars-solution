@@ -39,3 +39,10 @@ function scale(strng, k, n) {
   }
   return newArr2.join('\n');
 }
+
+// 3. Sum of two lowest positive integers
+function sumTwoSmallestNumbers(numbers) {
+  //Code here
+  const sortNum = numbers.sort((a, b) => a - b);
+  return sortNum[0] + sortNum[1];
+}

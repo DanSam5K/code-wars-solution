@@ -46,3 +46,8 @@ function sumTwoSmallestNumbers(numbers) {
   const sortNum = numbers.sort((a, b) => a - b);
   return sortNum[0] + sortNum[1];
 }
+
+// 4. Find Github admins
+
+const findAdmin = (list, lang) =>
+  list.filter((x) => x.language === lang && x.githubAdmin === 'yes');

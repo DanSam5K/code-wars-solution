@@ -51,3 +51,13 @@ function sumTwoSmallestNumbers(numbers) {
 
 const findAdmin = (list, lang) =>
   list.filter((x) => x.language === lang && x.githubAdmin === 'yes');
+
+// Get middle char
+function getMiddle(s) {
+  //Code goes here!
+  if (s.length % 2 === 0) {
+    return s[s.length / 2 - 1] + s[s.length / 2];
+  } else {
+    return s[Math.floor(s.length / 2)];
+  }
+}

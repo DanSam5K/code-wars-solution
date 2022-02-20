@@ -1,4 +1,4 @@
-// anagrams functions
+// 1. anagrams functions
 function anagrams(word, words) {
   let result = [];
   for (let element of words) {

@@ -52,7 +52,7 @@ function sumTwoSmallestNumbers(numbers) {
 const findAdmin = (list, lang) =>
   list.filter((x) => x.language === lang && x.githubAdmin === 'yes');
 
-// Get middle char
+// 5. Get middle char
 function getMiddle(s) {
   //Code goes here!
   if (s.length % 2 === 0) {
@@ -60,4 +60,11 @@ function getMiddle(s) {
   } else {
     return s[Math.floor(s.length / 2)];
   }
+}
+// 6. Sequence solution
+
+function sequence(x) {
+    let array = [];
+    for (let i = 1; i <= x; i++) array.push(i);
+    return array.sort();
 }

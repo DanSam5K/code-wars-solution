@@ -64,7 +64,25 @@ function getMiddle(s) {
 // 6. Sequence solution
 
 function sequence(x) {
-    let array = [];
-    for (let i = 1; i <= x; i++) array.push(i);
-    return array.sort();
+  let array = [];
+  for (let i = 1; i <= x; i++) array.push(i);
+  return array.sort();
+}
+
+// 7. IP address to number
+
+function ipToNum(ip) {
+  return ip.split('.').reduce((int, v) => int * 256 + +v);
+}
+
+function numToIp(num) {
+  return (
+    (num >>> 24) +
+    '.' +
+    ((num >> 16) & 255) +
+    '.' +
+    ((num >> 8) & 255) +
+    '.' +
+    (num & 255)
+  );
 }

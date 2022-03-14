@@ -15,4 +15,14 @@ function getPINs(observed) {
     8: ['5', '7', '9', '0'],
     9: ['6', '8'],
   };
+  function getCombination(digits, index, currentCombination) {
+    const currentDigit = digits[index];
+    const candidates = new Set(neighbors[currentDigit]);
+    candidates.add(currentDigit);
+
+    candidates.forEach(index == digits.length - 1 ? reachedEnd : goDeeper);
+  }
+  const stringifyDigits = observed.toString().split('');
+  getCombination(stringifyDigits, 0, '');
+  return combination;
 }

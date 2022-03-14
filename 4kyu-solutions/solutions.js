@@ -21,6 +21,12 @@ function getPINs(observed) {
     candidates.add(currentDigit);
 
     candidates.forEach(index == digits.length - 1 ? reachedEnd : goDeeper);
+    function reachedEnd(candidate) {
+      combination.push(currentCombination + candidate);
+    }
+    function goDeeper(candidate) {
+      getCombination(digits, index + 1, currentCombination + candidate);
+    }
   }
   const stringifyDigits = observed.toString().split('');
   getCombination(stringifyDigits, 0, '');

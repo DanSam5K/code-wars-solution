@@ -68,3 +68,11 @@ function sequence(x) {
   for (let i = 1; i <= x; i++) array.push(i);
   return array.sort();
 }
+
+// 7. List filtering
+function filter_list(l) {
+  // Return a new array with the strings filtered out
+  return l.filter((item) => {
+    return typeof item == 'number';
+  });
+}

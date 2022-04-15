@@ -83,3 +83,20 @@ const swap = str => {
     return x.toUpperCase() == x ? x.toLowerCase() : x.toUpperCase();
   });
 }
+
+// 9. wovels counts
+
+function getCount(str) {
+  var vowelsCount = 0;
+  
+  // enter your majic here
+  for(let i=0; i < str.length; i++){
+    
+    let vowel = "aeiou"
+    if(vowel.includes(str[i])){
+      vowelsCount ++;
+   }
+  }
+  
+  return vowelsCount;
+}

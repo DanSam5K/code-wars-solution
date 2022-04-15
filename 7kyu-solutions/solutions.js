@@ -76,3 +76,10 @@ function filter_list(l) {
     return typeof item == 'number';
   });
 }
+
+// 8. Case Swapping
+const swap = str => {
+  return str.replace(/[a-z]/gi, function(x) {
+    return x.toUpperCase() == x ? x.toLowerCase() : x.toUpperCase();
+  });
+}

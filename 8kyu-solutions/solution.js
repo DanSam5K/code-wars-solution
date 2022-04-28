@@ -143,11 +143,14 @@ function fakeBin2(x) {
   return x.replace(/[0-4]/g, '0').replace(/[5-9]/g, '1');
 }
 
-// 19. fake
 
-function fakeBin2(x) {
-  return x.replace(/[0-4]/g, '0').replace(/[5-9]/g, '1');
+// 19. Find the first non-consecutive number 
+
+function fristNonConsecutive(arr) {
+  for(let i = 0; i < arr.length - 1; i++) {
+    if(arr[i] !== arr[i+1] - 1) {
+      return arr[i] + 1;
+    }
+  }
+  return null
 }
-
-// 20 . Fake Binary
-

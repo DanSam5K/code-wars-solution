@@ -100,3 +100,13 @@ function getCount(str) {
   
   return vowelsCount;
 }
+
+// 10. Find the odd int
+
+function noOdds(values) {
+  let sum = [];
+  for (let i = 0; i < values.length; i++) {
+    sum.push(values[i]);
+  }
+  return sum;
+}

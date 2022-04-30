@@ -29,3 +29,18 @@ function numToIp(num) {
     (num & 255)
   );
 }
+
+// 3. Partial Keys solution
+function partialKeys(obj) {
+  const newObj = {};
+  Object.keys(obj).sort().reversed().forEach((key) => {
+    const value = obj[key];
+    for(let i=0; i<key.length; i++) {
+      const newKey = key.substring(0, i) + '*' + key.substring(i+1);
+      newObj[newKey] = value;
+    }
+  });
+  return newObj;
+}
+
+

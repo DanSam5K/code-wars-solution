@@ -43,4 +43,16 @@ function partialKeys(obj) {
   return newObj;
 }
 
+let handler =
+{
+  get: function(target, name)
+  {
+    let keys = Object.keys(target).filter(key => key.startsWith(name)).sort();
+    if(keys.length > 0)
+    {
+      return target[keys[0]];
+    }
+  }
+}
 
+const partialKeys = obj => new Proxy(obj, handler);

@@ -44,3 +44,8 @@ let handler =
 }
 
 const partialKeys = obj => new Proxy(obj, handler);
+
+// 4. Consonant value solution
+function solve(s) {
+  return s.split(/[aeiou]+/).reduce((s,n) => Math.max(s, n.split('').reduce((a,b) => a + b.charCodeAt(0) - 96, 0)), 0);
+};

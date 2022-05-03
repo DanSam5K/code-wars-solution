@@ -49,3 +49,9 @@ const partialKeys = obj => new Proxy(obj, handler);
 function solve(s) {
   return s.split(/[aeiou]+/).reduce((s,n) => Math.max(s, n.split('').reduce((a,b) => a + b.charCodeAt(0) - 96, 0)), 0);
 };
+
+// 5. Stop Spinning my words solution
+
+function spinWords(str) {
+  return str.split(' ').map(word => word.length >= 5 ? word.split('').reverse().join('') : word).join(' ');
+}

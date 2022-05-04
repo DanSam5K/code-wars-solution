@@ -55,3 +55,8 @@ function solve(s) {
 function spinWords(str) {
   return str.split(' ').map(word => word.length >= 5 ? word.split('').reverse().join('') : word).join(' ');
 }
+
+// 6. Sum of positive solution
+function positiveSum(arr) {
+  return arr.filter(x => x > 0).reduce((a, b) => a + b, 0);
+}

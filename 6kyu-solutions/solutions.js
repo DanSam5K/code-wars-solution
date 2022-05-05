@@ -56,7 +56,8 @@ function spinWords(str) {
   return str.split(' ').map(word => word.length >= 5 ? word.split('').reverse().join('') : word).join(' ');
 }
 
-// 6. Sum of positive solution
-function positiveSum(arr) {
-  return arr.filter(x => x > 0).reduce((a, b) => a + b, 0);
+// 6. Does my number look big in this? solution
+
+function narcissistic(value) {
+  return value.toString().split('').reduce((sum, n) => sum + Math.pow(n, value.toString().length), 0) === value;
 }

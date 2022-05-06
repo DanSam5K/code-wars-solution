@@ -154,3 +154,8 @@ function fristNonConsecutive(arr) {
   }
   return null
 }
+
+// 20 Sum numbers
+function sum(numbers) {
+  return numbers.reduce((a, b) => a + b, 0);
+}

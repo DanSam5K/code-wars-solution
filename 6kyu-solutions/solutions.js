@@ -61,3 +61,13 @@ function spinWords(str) {
 function narcissistic(value) {
   return value.toString().split('').reduce((sum, n) => sum + Math.pow(n, value.toString().length), 0) === value;
 }
+
+// 7. Find missing letter solution
+function findMissingLetter(array) {
+  let firstLetter = array[0].charCodeAt(0);
+  for(let i = 0; i < array.length; i++) {
+    if(array[i].charCodeAt(0) !== firstLetter + i) {
+      return String.fromCharCode(firstLetter + i);
+    }
+  }
+}

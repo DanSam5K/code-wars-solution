@@ -71,3 +71,8 @@ function findMissingLetter(array) {
     }
   }
 }
+
+// 8. IP validation solution
+function isValidIP (str) {
+  return str.split('.').length === 4 && str.split('.').every(v => v.length === 1 && v >= 0 && v <= 255);
+}

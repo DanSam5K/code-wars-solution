@@ -76,3 +76,9 @@ function findMissingLetter(array) {
 function isValidIP (str) {
   return str.split('.').length === 4 && str.split('.').every(v => v.length === 1 && v >= 0 && v <= 255);
 }
+
+//8. IP Validation Version 2
+
+function isValidIP(str) {
+  return /^(([1-9]?\d|1\d\d|2[0-4]\d|25[0-5])(\.(?!$)|$)){4}$/.test(str);
+}

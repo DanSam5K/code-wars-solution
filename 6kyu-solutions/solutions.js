@@ -83,5 +83,12 @@ function isValidIP(str) {
   return /^(([1-9]?\d|1\d\d|2[0-4]\d|25[0-5])(\.(?!$)|$)){4}$/.test(str);
 }
 
-// 9. Two Juggers solution
+// 9. Two Joggers solution
 
+var nbrOfLaps = function (x,y) {
+  let newVal = x;
+  while(newVal % y !== 0) {
+    newVal += x;
+  }
+  return [newVal / x, newVal / y];
+} 

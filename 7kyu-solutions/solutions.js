@@ -110,3 +110,16 @@ function noOdds(values) {
   }
   return sum;
 }
+
+// 11. Don't give me five! solution
+
+function dontGiveMeFive(start, end)
+{ let count = 0
+  for(let i = start; i <= end; i++){
+    let str = i.toString();
+    if(!/[5]/.test(str)){
+      count ++;
+    }
+  }
+  return count;
+}

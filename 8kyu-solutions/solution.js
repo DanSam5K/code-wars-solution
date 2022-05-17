@@ -159,3 +159,9 @@ function fristNonConsecutive(arr) {
 function sum(numbers) {
   return numbers.reduce((a, b) => a + b, 0);
 }
+
+// 21. Volume fo a cuboid
+
+function findVolume(l, w, h) {
+  return l * w * h;
+}

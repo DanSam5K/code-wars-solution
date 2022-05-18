@@ -165,3 +165,8 @@ function sum(numbers) {
 function findVolume(l, w, h) {
   return l * w * h;
 }
+
+// 22. convert string to integer
+function stringToInteger(str) {
+  return parseInt(str, 10);
+}

@@ -170,3 +170,8 @@ function findVolume(l, w, h) {
 function stringToInteger(str) {
   return parseInt(str, 10);
 }
+
+// 21. Return negative num 
+function makeNegative(num) {
+  return -Math.abs(num);
+}

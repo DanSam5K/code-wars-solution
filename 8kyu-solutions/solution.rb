@@ -7,3 +7,9 @@ end
 def string_to_integer(string)
   string.to_i
 end
+
+#3. return negative number
+def negative(number)
+  number unless number > 0
+  -number
+end

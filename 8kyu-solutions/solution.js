@@ -175,3 +175,12 @@ function stringToInteger(str) {
 function makeNegative(num) {
   return -Math.abs(num);
 }
+
+// 22. what is between
+function between(a, b){
+  let result = [];
+  for(let i = a; i <= b; i++) {
+    result.push(i);
+  }
+  return result;
+}

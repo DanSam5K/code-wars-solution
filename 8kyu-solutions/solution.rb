@@ -18,3 +18,8 @@ end
 def between(a, b)
   (a..b).to_a
 end
+
+# 5. Sum of differences in array
+def sum_of_differences(array)
+  array.sort.each_cons(2).map { |a, b| b - a }.reduce(:+)
+end

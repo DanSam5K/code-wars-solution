@@ -184,3 +184,14 @@ function between(a, b){
   }
   return result;
 }
+
+// 23. sum of differences in an array
+function sumOfDifferences(arr) {
+  if(arr.length <= 1) return 0;
+  arr.sort((a, b) => a - b);
+  let sum = 0;
+  for(let i = 0; i < arr.length - 1; i++) {
+    sum += arr[i + 1] - arr[i];
+  }
+  return Math.abs(sum);
+}

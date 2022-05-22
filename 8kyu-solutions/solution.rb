@@ -21,5 +21,6 @@ end
 
 # 5. Sum of differences in array
 def sum_of_differences(array)
+  return 0 unless array.size > 1
   array.sort.each_cons(2).map { |a, b| b - a }.reduce(:+)
 end

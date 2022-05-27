@@ -27,14 +27,9 @@ end
 
 # 6. I love you, a little , a lot, passionately ... not at all
 def how_much_i_love_you(nb_petals)
-  case nb_petals
-  when 0..7
-    'I love you'
-  when 8..15
-    'a little'
-  when 16..100
-    'a lot'
-  else
-    'passionately'
-  end
+  outcome = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all']
+  outcome[(nb_petals - 1) % outcome.size]
 end
+
+
+

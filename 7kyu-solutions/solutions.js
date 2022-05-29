@@ -137,3 +137,13 @@ function minSum(arr){
   }
   return sum;
 }
+
+// 13. Narcissistic number
+function narcissistic(value) {
+  let str = value.toString();
+  let sum = 0;
+  for (let i = 0; i < str.length; i++) {
+    sum += Math.pow(str[i], str.length);
+  }
+  return sum === value;
+}

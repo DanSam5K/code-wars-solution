@@ -147,3 +147,11 @@ function narcissistic(value) {
   }
   return sum === value;
 }
+
+// 14. Ghostbusters (whitespace removal)
+function ghostBusters(buiiding){
+  let ghost = ""
+  if(!building.) return "You just wanted my autograph didn't you?"
+  return buiiding.replace(/\s/g, '');
+}
+  

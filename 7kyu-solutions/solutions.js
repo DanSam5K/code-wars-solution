@@ -149,9 +149,4 @@ function narcissistic(value) {
 }
 
 // 14. Ghostbusters (whitespace removal)
-function ghostBusters(buiiding){
-  let ghost = ""
-  if(!building.) return "You just wanted my autograph didn't you?"
-  return buiiding.replace(/\s/g, '');
-}
-  
+const ghostBusters = building => building.includes(" ") ? building.replace(/\s/g, '') :"You just wanted my autograph didn't you?"

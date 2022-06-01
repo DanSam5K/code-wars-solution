@@ -21,3 +21,12 @@ def is_narcissistic(num)
   end
   sum == num
 end
+
+def ghostbusters(building)
+  #your code here
+  if building.include?(' ')
+    building.gsub(' ', '')
+  else
+    "You just wanted my autograph didn't you?"
+  end
+end

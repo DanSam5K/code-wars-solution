@@ -152,7 +152,6 @@ function narcissistic(value) {
 const ghostBusters = building => building.includes(" ") ? building.replace(/\s/g, '') :"You just wanted my autograph didn't you?"
 
 // 15. Sort by Last Char
-
 function last(x) {
   return x.split(' ').sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
 }

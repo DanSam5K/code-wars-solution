@@ -21,12 +21,19 @@ def is_narcissistic(num)
   end
   sum == num
 end
-
+# 3. Ghost buster solution
 def ghostbusters(building)
   #your code here
   if building.include?(' ')
     building.gsub(' ', '')
   else
     "You just wanted my autograph didn't you?"
+  end
+end
+# 4. Sort by last character
+def last(x)
+  word_arr = x.split(' ')
+  word_arr.sort_by do |word|
+    word[-1]
   end
 end

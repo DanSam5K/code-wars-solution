@@ -92,3 +92,20 @@ var nbrOfLaps = function (x,y) {
   }
   return [newVal / x, newVal / y];
 } 
+
+//. 10. Mad Max: Recursion road solution
+function max(array) {
+  if(array.length === 0) {
+    return -Infinity;
+  }
+  let max = array[0]
+  for(let i=0; i<array.length; i++){
+    if(array[i] > max){
+      max = array[i]
+    }
+  }
+  return max
+}
+
+//. 10b. Mad Max: Recursion road solution
+

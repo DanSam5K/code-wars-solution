@@ -127,3 +127,12 @@ function max(array) {
     }
   }
 }
+
+//. 11. The Supermarket Queue solution
+function queueTime(customers, n) {
+  let queue = Array(n).fill(0);
+  customers.forEach(customer => {
+    queue[queue.indexOf(Math.min(...queue))] += customer;
+  });
+  return Math.max(...queue);
+}

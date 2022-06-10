@@ -136,3 +136,14 @@ function queueTime(customers, n) {
   });
   return Math.max(...queue);
 }
+
+//. 12. Pair of gloves solution
+function numberOfPairs(gloves){
+  let uniques = new Set(gloves)
+  let pairs = 0
+  for(let unique of uniques){
+    const count = Math.floor(gloves.filter((glove) => glove === unique).length / 2)
+    pairs += count
+  }
+  return pairs
+}

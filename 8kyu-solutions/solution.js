@@ -200,3 +200,14 @@ function sumOfDifferences(arr) {
 function howMuchILoveYou(nbPetals) {
   return ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all'][(nbPetals -1)%6];
 }
+
+// 25. How many stairs will Suzuki climb in 20 years?
+function stairsIn20(s) {
+  let sum = 0;
+  for(let i = 0; i < s.length; i++) {
+    for(let j = 0; j < s[i].length; j++){
+      sum = s[i][j] * 20
+    }
+  }
+  return sum
+}

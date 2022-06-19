@@ -31,5 +31,16 @@ def how_much_i_love_you(nb_petals)
   outcome[(nb_petals - 1) % outcome.size]
 end
 
+# 7. How many stairs will Suzuki climb in 20 years? soln
+def stairs_in_20(stairs)
+  sum = 0
+  stairs.each { |step|
+     step.each { |stair|
+      sum += stair * 20
+     }
+  }
+  sum
+end
+
 
 

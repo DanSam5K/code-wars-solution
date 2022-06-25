@@ -42,5 +42,10 @@ def stairs_in_20(stairs)
   sum
 end
 
+# 8. Find the missing letter
+def find_missing_letter(array)
+  array.each_cons(2).map { |a, b| b - a }.reduce(:+)
+end
+
 
 

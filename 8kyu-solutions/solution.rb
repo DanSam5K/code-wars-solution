@@ -47,5 +47,12 @@ def find_missing_letter(array)
   array.each_cons(2).map { |a, b| b - a }.reduce(:+)
 end
 
+# 9. Is string Uppercase solution
+class String
+  def is_uppercase?
+    self == self.upcase
+  end
+end
+
 
 

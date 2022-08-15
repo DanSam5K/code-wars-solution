@@ -37,3 +37,9 @@ def last(x)
     word[-1]
   end
 end
+
+# 5. Find the smallest power higher than a given a value
+def find_next_power(val, pow_)
+  
+  
+end

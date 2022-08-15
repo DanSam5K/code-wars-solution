@@ -222,6 +222,3 @@ function stairsIn20(s) {
 String.prototype.isUpperCase = function () {
   return this.toUpperCase() === this.toString();
 };
-
-// 27. Find the smallest power higher than a given a value
-function findNextPower(val, pow_) {}

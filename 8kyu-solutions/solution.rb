@@ -53,11 +53,3 @@ class String
     self == self.upcase
   end
 end
-
-def find_next_power(val, pow_)
-  # Good Luck!
-  val ** pow_
-end
-
-
-

@@ -164,4 +164,13 @@ function last(x) {
 
 // 16. Find the smallest power higher than a given a value
 
-function findNextPower(val, pow_) {}
+function findNextPower(val, pow_) {
+  if (val == 1) {
+    return 2 ** pow_;
+  }
+  for (let i = 0; i <= val; i++) {
+    if (i ** pow_ > val) {
+      return i ** pow_;
+    }
+  }
+}

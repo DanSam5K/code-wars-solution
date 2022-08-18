@@ -40,6 +40,12 @@ end
 
 # 5. Find the smallest power higher than a given a value
 def find_next_power(val, pow_)
-  
-  
+   i = 0
+   while i <= val
+     if i ** pow_ > val
+      break
+     end
+     i += 1
+   end
+  i ** pow_
 end

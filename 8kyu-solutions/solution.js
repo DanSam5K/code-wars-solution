@@ -222,3 +222,14 @@ function stairsIn20(s) {
 String.prototype.isUpperCase = function () {
   return this.toUpperCase() === this.toString();
 };
+
+// 27. find number which are divisible by given number
+function divisibleBy(numbers, divisor) {
+  let divisibleNum = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % divisor === 0) {
+      divisibleNum.push(numbers[i]);
+    }
+  }
+  return divisibleNum;
+}

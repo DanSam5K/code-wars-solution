@@ -53,3 +53,8 @@ class String
     self == self.upcase
   end
 end
+
+# 10. find numbers which are divisible by given number
+def divisible_by(numbers, n)
+  numbers.select { |number| number % n == 0 }
+end

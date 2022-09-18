@@ -69,3 +69,9 @@ def sum_no_duplicates(l)
   end
   sum
 end
+
+# sum no duplicates easy simple implementation
+
+def sum_no_duplicates(l) 
+  l.reject {|x| l.count(x) > 1}.sum
+end

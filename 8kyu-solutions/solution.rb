@@ -58,3 +58,8 @@ end
 def divisible_by(numbers, n)
   numbers.select { |number| number % n == 0 }
 end
+
+# 11. am I a wilson prime?
+def am_i_wilson(n)
+  n == 5 || n == 13 || n == 563
+end

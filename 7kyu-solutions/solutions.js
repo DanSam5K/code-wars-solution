@@ -174,3 +174,5 @@ function findNextPower(val, pow_) {
     }
   }
 }
+
+// 17. Sum list but ignore duplicates

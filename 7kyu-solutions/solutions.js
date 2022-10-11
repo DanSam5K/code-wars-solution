@@ -175,4 +175,7 @@ function findNextPower(val, pow_) {
   }
 }
 
-// 17. Sum list but ignore duplicates
+// 17. Another card game
+function solution(frank, sam, tom) {
+  //game on
+}

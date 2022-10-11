@@ -70,8 +70,13 @@ def sum_no_duplicates(l)
   sum
 end
 
-# sum no duplicates easy simple implementation
+# 7 sum no duplicates easy simple implementation
 
 def sum_no_duplicates(l) 
   l.reject {|x| l.count(x) > 1}.sum
+end
+
+# 8 Another card game
+def solution(frank, sam, tom)
+  
 end

@@ -80,4 +80,4 @@ end
 def get_squares(array)
   #Enter code here!
   array.select {|num| num**0.5%1 == 0}.uniq.sort
-end
+end'[]];/

@@ -20,15 +20,16 @@ def number_of_pairs(n)
   return number_of_pairs(n - 1) + number_of_pairs(n - 2)
 end
 
+# 4. find numbers with same amount of divisors
+def count_pairs_int(diff, n_max)
+  count = 0
+  (1..n_max).each do |n|
+    count += 1 if divisors(n) == divisors(n + diff)
+  end
+  count
+end
 
-# function numberOfPairs(gloves){
-#   let pairs = 0;
-#   for(let i=0; i<gloves.length; i++){
-#     for(let j=i+1; j<gloves.length; j++){
-#       if(gloves[i] === gloves[j]){
-#         pairs++;
-#       }
-#     }
-#   }
-#   return pairs;
-# }
+def divisors(n)
+  (1..n).select { |i| n % i == 0 }.length
+end
+

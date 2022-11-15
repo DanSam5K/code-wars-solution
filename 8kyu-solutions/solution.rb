@@ -63,3 +63,8 @@ end
 def am_i_wilson(n)
   n == 5 || n == 13 || n == 563
 end
+
+# 12. Sum of positive
+def positive_sum(arr)
+  arr.select { |number| number > 0 }.reduce(:+)
+end

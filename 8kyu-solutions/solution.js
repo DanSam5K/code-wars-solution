@@ -242,3 +242,5 @@ function amIWilson(p) {
 
 // 29. Sum of positive
 function positiveSum(arr) {}
+
+// 30. Is pythagorastriple

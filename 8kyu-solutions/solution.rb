@@ -73,3 +73,8 @@ end
 def bar_triang(p1, p2, p3)
   [((p1[0] + p2[0] + p3[0]) / 3.0).round(4), ((p1[1] + p2[1] + p3[1]) / 3.0).round(4)]
 end
+
+# 14. Is pythagoras triplet
+def is_triplet(a, b, c)
+  a**2 + b**2 == c**2
+end

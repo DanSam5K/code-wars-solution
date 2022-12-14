@@ -78,3 +78,8 @@ end
 def is_triplet(a, b, c)
   a**2 + b**2 == c**2
 end
+
+# 15. Sum of two lowest positive integers
+def sum_two_smallest_numbers(numbers)
+  numbers.sort[0..1].reduce(:+)
+end

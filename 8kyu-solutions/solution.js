@@ -243,4 +243,18 @@ function amIWilson(p) {
 // 29. Sum of positive
 function positiveSum(arr) {}
 
-// 30. Is pythagorastriple
+// 30. find out whether the shape is a cube
+var cubeChecker = function (volume, side) {
+  return volume === side ** 3;
+};
+
+// 31. counting sheep
+function countSheeps(arrayOfSheep) {
+  let count = 0;
+  for (let i = 0; i < arrayOfSheep.length; i++) {
+    if (arrayOfSheep[i] === true) {
+      count++;
+    }
+  }
+  return count;
+}

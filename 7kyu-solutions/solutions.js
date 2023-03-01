@@ -179,3 +179,6 @@ function findNextPower(val, pow_) {
 function solution(frank, sam, tom) {
   //game on
 }
+
+// 18 Jenny the youngest detective
+function missingWord(nums, str) {}

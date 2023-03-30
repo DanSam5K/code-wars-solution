@@ -31,50 +31,70 @@ function numToIp(num) {
 }
 
 // 3. Partial Keys solution
-let handler =
-{
-  get: function(target, name)
-  {
-    let keys = Object.keys(target).filter(key => key.startsWith(name)).sort();
-    if(keys.length > 0)
-    {
+let handler = {
+  get: function (target, name) {
+    let keys = Object.keys(target)
+      .filter((key) => key.startsWith(name))
+      .sort();
+    if (keys.length > 0) {
       return target[keys[0]];
     }
-  }
-}
+  },
+};
 
-const partialKeys = obj => new Proxy(obj, handler);
+const partialKeys = (obj) => new Proxy(obj, handler);
 
 // 4. Consonant value solution
 function solve(s) {
-  return s.split(/[aeiou]+/).reduce((s,n) => Math.max(s, n.split('').reduce((a,b) => a + b.charCodeAt(0) - 96, 0)), 0);
-};
+  return s.split(/[aeiou]+/).reduce(
+    (s, n) =>
+      Math.max(
+        s,
+        n.split('').reduce((a, b) => a + b.charCodeAt(0) - 96, 0)
+      ),
+    0
+  );
+}
 
 // 5. Stop Spinning my words solution
 
 function spinWords(str) {
-  return str.split(' ').map(word => word.length >= 5 ? word.split('').reverse().join('') : word).join(' ');
+  return str
+    .split(' ')
+    .map((word) =>
+      word.length >= 5 ? word.split('').reverse().join('') : word
+    )
+    .join(' ');
 }
 
 // 6. Does my number look big in this? solution
 
 function narcissistic(value) {
-  return value.toString().split('').reduce((sum, n) => sum + Math.pow(n, value.toString().length), 0) === value;
+  return (
+    value
+      .toString()
+      .split('')
+      .reduce((sum, n) => sum + Math.pow(n, value.toString().length), 0) ===
+    value
+  );
 }
 
 // 7. Find missing letter solution
 function findMissingLetter(array) {
   let firstLetter = array[0].charCodeAt(0);
-  for(let i = 0; i < array.length; i++) {
-    if(array[i].charCodeAt(0) !== firstLetter + i) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].charCodeAt(0) !== firstLetter + i) {
       return String.fromCharCode(firstLetter + i);
     }
   }
 }
 
 // 8. IP validation solution
-function isValidIP (str) {
-  return str.split('.').length === 4 && str.split('.').every(v => v.length === 1 && v >= 0 && v <= 255);
+function isValidIP(str) {
+  return (
+    str.split('.').length === 4 &&
+    str.split('.').every((v) => v.length === 1 && v >= 0 && v <= 255)
+  );
 }
 
 //8. IP Validation Version 2
@@ -85,44 +105,41 @@ function isValidIP(str) {
 
 // 9. Two Joggers solution
 
-var nbrOfLaps = function (x,y) {
+var nbrOfLaps = function (x, y) {
   let newVal = x;
-  while(newVal % y !== 0) {
+  while (newVal % y !== 0) {
     newVal += x;
   }
   return [newVal / x, newVal / y];
-} 
+};
 
 //. 10. Mad Max: Recursion road solution
 function max(array) {
-  if(array.length === 0) {
+  if (array.length === 0) {
     return -Infinity;
   }
-  let max = array[0]
-  for(let i=0; i<array.length; i++){
-    if(array[i] > max){
-      max = array[i]
+  let max = array[0];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > max) {
+      max = array[i];
     }
   }
-  return max
+  return max;
 }
 
 //. 10b. Mad Max: Recursion road solution
 
 function max(array) {
-  if(array.length === 0 ){
+  if (array.length === 0) {
     return -Infinity;
-  }
-  else if(array.length === 1){
+  } else if (array.length === 1) {
     return array[0];
-  }
-  else if(array.length >= 2){
-    if(array[0] <= array[1]){
-      array.splice(0,1);
+  } else if (array.length >= 2) {
+    if (array[0] <= array[1]) {
+      array.splice(0, 1);
       return max(array);
-    }
-    else{
-      array.splice(1,1);
+    } else {
+      array.splice(1, 1);
       return max(array);
     }
   }
@@ -131,19 +148,26 @@ function max(array) {
 //. 11. The Supermarket Queue solution
 function queueTime(customers, n) {
   let queue = Array(n).fill(0);
-  customers.forEach(customer => {
+  customers.forEach((customer) => {
     queue[queue.indexOf(Math.min(...queue))] += customer;
   });
   return Math.max(...queue);
 }
 
 //. 12. Pair of gloves solution
-function numberOfPairs(gloves){
-  let uniques = new Set(gloves)
-  let pairs = 0
-  for(let unique of uniques){
-    const count = Math.floor(gloves.filter((glove) => glove === unique).length / 2)
-    pairs += count
+function numberOfPairs(gloves) {
+  let uniques = new Set(gloves);
+  let pairs = 0;
+  for (let unique of uniques) {
+    const count = Math.floor(
+      gloves.filter((glove) => glove === unique).length / 2
+    );
+    pairs += count;
   }
-  return pairs
+  return pairs;
+}
+
+//. 13. Find the unique number solution
+function findUniq(arr) {
+  return arr.find((n) => arr.indexOf(n) === arr.lastIndexOf(n));
 }

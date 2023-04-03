@@ -33,3 +33,12 @@ function getPINs(observed) {
   return combination;
 }
 
+// 2. Find the odd int solution
+function findOdd(A) {
+  //happy coding!
+  let result = 0;
+  for (let i = 0; i < A.length; i++) {
+    result ^= A[i];
+  }
+  return result;
+}

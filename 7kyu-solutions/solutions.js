@@ -1,8 +1,8 @@
 // 1. Tennis Game Points
 function tennisGamePoints(score) {
   //coding and coding..
-  let p1 = score.split("-")[0];
-  let p2 = score.split("-")[1];
+  let p1 = score.split('-')[0];
+  let p2 = score.split('-')[1];
   let helperObject = {
     love: 0,
     15: 1,
@@ -10,7 +10,7 @@ function tennisGamePoints(score) {
     40: 3,
   };
   p1 = helperObject[p1];
-  if (p2 === "all") {
+  if (p2 === 'all') {
     p2 = p1;
   } else {
     p2 = helperObject[p2];
@@ -21,11 +21,11 @@ function tennisGamePoints(score) {
 // 2. Scaling Squared Strings
 function scale(strng, k, n) {
   // your code
-  if (strng === "") return "";
-  let arr = strng.split("\n");
+  if (strng === '') return '';
+  let arr = strng.split('\n');
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
-    let word = "";
+    let word = '';
     for (let j = 0; j < arr[i].length; j++) {
       word += arr[i][j].repeat(k);
     }
@@ -37,7 +37,7 @@ function scale(strng, k, n) {
       newArr2.push(newArr[i]);
     }
   }
-  return newArr2.join("\n");
+  return newArr2.join('\n');
 }
 
 // 3. Sum of two lowest positive integers
@@ -50,7 +50,7 @@ function sumTwoSmallestNumbers(numbers) {
 // 4. Find Github admins
 
 const findAdmin = (list, lang) =>
-  list.filter((x) => x.language === lang && x.githubAdmin === "yes");
+  list.filter((x) => x.language === lang && x.githubAdmin === 'yes');
 
 // 5. Get middle char
 function getMiddle(s) {
@@ -73,7 +73,7 @@ function sequence(x) {
 function filter_list(l) {
   // Return a new array with the strings filtered out
   return l.filter((item) => {
-    return typeof item == "number";
+    return typeof item == 'number';
   });
 }
 
@@ -91,7 +91,7 @@ function getCount(str) {
 
   // enter your majic here
   for (let i = 0; i < str.length; i++) {
-    let vowel = "aeiou";
+    let vowel = 'aeiou';
     if (vowel.includes(str[i])) {
       vowelsCount++;
     }
@@ -151,14 +151,14 @@ function narcissistic(value) {
 
 // 14. Ghostbusters (whitespace removal)
 const ghostBusters = (building) =>
-  building.includes(" ")
-    ? building.replace(/\s/g, "")
+  building.includes(' ')
+    ? building.replace(/\s/g, '')
     : "You just wanted my autograph didn't you?";
 
 // 15. Sort by Last Char
 function last(x) {
   return x
-    .split(" ")
+    .split(' ')
     .sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
 }
 
@@ -213,5 +213,14 @@ class Block {
         this.length * this.height +
         this.height * this.width)
     );
+  }
+}
+
+// 19. Find the missing letter
+function findMissingLetter(array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].charCodeAt() + 1 !== array[i + 1].charCodeAt()) {
+      return String.fromCharCode(array[i].charCodeAt() + 1);
+    }
   }
 }

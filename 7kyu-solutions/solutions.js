@@ -224,3 +224,7 @@ function findMissingLetter(array) {
     }
   }
 }
+// 20. find the middle char
+function getMiddle(s) {
+  return s.slice((s.length - 1) / 2, s.length / 2 + 1);
+}

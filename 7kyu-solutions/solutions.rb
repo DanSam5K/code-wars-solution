@@ -80,4 +80,14 @@ end
 def get_squares(array)
   #Enter code here!
   array.select {|num| num**0.5%1 == 0}.uniq.sort
-end'[]];/
+end
+
+# 9. find the middle letter
+def get_middle(s)
+  #your code here
+  if s.size.even?
+    s[s.size/2 - 1] + s[s.size/2]
+  else
+    s[s.size/2]
+  end
+end

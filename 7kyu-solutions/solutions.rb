@@ -91,3 +91,12 @@ def get_middle(s)
     s[s.size/2]
   end
 end
+
+# 10. find the middle letter
+def get_middle(s)
+  #your code here
+  if s.size.even?
+    s[s.size/2 - 1] + s[s.size/2]
+  else
+    s[s.size/2]
+  end

@@ -228,3 +228,17 @@ function findMissingLetter(array) {
 function getMiddle(s) {
   return s.slice((s.length - 1) / 2, s.length / 2 + 1);
 }
+
+// 21. Valid Parentheses
+function validParentheses(parens) {
+  let arr = [];
+  for (let i = 0; i < parens.length; i++) {
+    if (parens[i] === '(') {
+      arr.push(parens[i]);
+    } else if (parens[i] === ')') {
+      if (arr.length === 0) return false;
+      arr.pop();
+    }
+  }
+  return arr.length === 0;
+}

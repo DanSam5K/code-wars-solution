@@ -242,3 +242,26 @@ function validParentheses(parens) {
   }
   return arr.length === 0;
 }
+
+// 22. Dot calculator
+function dotCalculator(equation) {
+  //your code here
+  let arr = equation.split(' ');
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === '+') {
+      sum += Number(arr[i - 1]) * Number(arr[i + 1]);
+    } else if (arr[i] === '-') {
+      sum -= Number(arr[i - 1]) * Number(arr[i + 1]);
+    } else if (arr[i] === '*') {
+      sum += Number(arr[i - 1]) * Number(arr[i + 1]);
+    } else if (arr[i] === '/') {
+      sum += Number(arr[i - 1]) / Number(arr[i + 1]);
+    } else if (arr[i] === '^') {
+      sum += Number(arr[i - 1]) ** Number(arr[i + 1]);
+    } else if (arr[i] === '%') {
+      sum += Number(arr[i - 1]) % Number(arr[i + 1]);
+    }
+  }
+  return sum;
+}

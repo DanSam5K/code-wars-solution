@@ -247,21 +247,22 @@ function validParentheses(parens) {
 function dotCalculator(equation) {
   //your code here
   let arr = equation.split(' ');
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === '+') {
-      sum += Number(arr[i - 1]) * Number(arr[i + 1]);
-    } else if (arr[i] === '-') {
-      sum -= Number(arr[i - 1]) * Number(arr[i + 1]);
-    } else if (arr[i] === '*') {
-      sum += Number(arr[i - 1]) * Number(arr[i + 1]);
-    } else if (arr[i] === '/') {
-      sum += Number(arr[i - 1]) / Number(arr[i + 1]);
-    } else if (arr[i] === '^') {
-      sum += Number(arr[i - 1]) ** Number(arr[i + 1]);
-    } else if (arr[i] === '%') {
-      sum += Number(arr[i - 1]) % Number(arr[i + 1]);
-    }
+  let dotToFill;
+  let result = '';
+  if (arr[1] === '+') {
+    return arr[0] + arr[2];
+  } else if (arr[1] === '-') {
+    dotToFill = arr[0].length - arr[2].length;
+    console.log(dotToFill);
+    return (result = dotToFill > 0 ? '.'.repeat(dotToFill) : '');
+  } else if (arr[1] === '*') {
+    dotToFill = arr[0].length * arr[2].length;
+    return (result = dotToFill > 0 ? '.'.repeat(dotToFill) : '');
+  } else if (arr[1] === '/') {
+    dotToFill = arr[0].length / arr[2].length;
+    return (result = dotToFill > 0 ? '.'.repeat(dotToFill) : '');
+  } else if (arr[1] === '%') {
+    dotToFill = arr[0].length % arr[2].length;
+    return (result = dotToFill > 0 ? '.'.repeat(dotToFill) : '');
   }
-  return sum;
 }

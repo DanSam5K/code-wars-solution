@@ -42,3 +42,9 @@ function findOdd(A) {
   }
   return result;
 }
+
+// 3. Sort the odd solution
+function sortArray(array) {
+  const oddArray = array.filter((item) => item % 2 !== 0).sort((a, b) => a - b);
+  return array.map((item) => (item % 2 !== 0 ? oddArray.shift() : item));
+}

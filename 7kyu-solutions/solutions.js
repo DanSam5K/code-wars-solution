@@ -19,10 +19,12 @@ function tennisGamePoints(score) {
 }
 
 // 2. Scaling Squared Strings
-function scale(strng, k, n) {
+function scale(str, k, n) {
   // your code
-  if (strng === '') return '';
-  let arr = strng.split('\n');
+  if (str === '') {
+    return '';
+  }
+  let arr = str.split('\n');
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
     let word = '';
@@ -84,12 +86,11 @@ const swap = (str) => {
   });
 };
 
-// 9. wovels counts
-
+// 9. Vowel Count
 function getCount(str) {
-  var vowelsCount = 0;
+  let vowelsCount = 0;
 
-  // enter your majic here
+  // enter your magic here
   for (let i = 0; i < str.length; i++) {
     let vowel = 'aeiou';
     if (vowel.includes(str[i])) {
@@ -125,14 +126,14 @@ function dontGiveMeFive(start, end) {
 
 // 12. Min sum of array
 function minSum(arr) {
-  arr = arr.sort(function (a, b) {
+  let newArr = arr.sort(function (a, b) {
     return a - b;
   });
   let i = 0;
-  let j = arr.length - 1;
+  let j = newArr.length - 1;
   let sum = 0;
   while (i < j) {
-    sum += arr[i] * arr[j];
+    sum += newArr[i] * newArr[j];
     i++;
     j--;
   }
@@ -149,7 +150,7 @@ function narcissistic(value) {
   return sum === value;
 }
 
-// 14. Ghostbusters (whitespace removal)
+// 14. Ghost-busters (whitespace removal)
 const ghostBusters = (building) =>
   building.includes(' ')
     ? building.replace(/\s/g, '')
@@ -236,7 +237,9 @@ function validParentheses(parens) {
     if (parens[i] === '(') {
       arr.push(parens[i]);
     } else if (parens[i] === ')') {
-      if (arr.length === 0) return false;
+      if (arr.length === 0) {
+        return false;
+      }
       arr.pop();
     }
   }
@@ -266,11 +269,13 @@ function dotCalculator(equation) {
     return (result = dotToFill > 0 ? '.'.repeat(dotToFill) : '');
   }
 }
-
 // is power of two
 function isPowerOfTwo(n) {
-  //rescursion
-  if (n === 1) return true;
-  if (n < 1) return false;
-  return isPowerOfTwo(n / 2);
+  if (n < 1) {
+    return false;
+  }
+  while (n % 2 == 0) {
+    n /= 2;
+  }
+  return n == 1;
 }

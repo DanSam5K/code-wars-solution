@@ -48,3 +48,16 @@ function sortArray(array) {
   const oddArray = array.filter((item) => item % 2 !== 0).sort((a, b) => a - b);
   return array.map((item) => (item % 2 !== 0 ? oddArray.shift() : item));
 }
+
+// 4. Exquisite corpse solution
+function exquisiteCorpse(part1, part2) {
+  let result = '';
+  for (let i = 0; i < part1.length; i++) {
+    if (i % 2 === 0) {
+      result += part1[i];
+    } else {
+      result += part2[i];
+    }
+  }
+  return result;
+}

@@ -61,3 +61,9 @@ function exquisiteCorpse(part1, part2) {
   }
   return result;
 }
+
+// 5. Find the unique number solution
+function findUniq(arr) {
+  arr.sort((a, b) => a - b);
+  return arr[0] === arr[1] ? arr.pop() : arr[0];
+}

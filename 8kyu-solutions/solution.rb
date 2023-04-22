@@ -83,3 +83,7 @@ end
 def sum_two_smallest_numbers(numbers)
   numbers.sort[0..1].reduce(:+)
 end
+
+# 16. Sum of positive
+def positive_sum(arr)
+  arr.select { |number| number > 0 }.reduce(:+)

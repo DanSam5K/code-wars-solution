@@ -269,7 +269,7 @@ function dotCalculator(equation) {
     return (result = dotToFill > 0 ? '.'.repeat(dotToFill) : '');
   }
 }
-// is power of two
+// 23 is power of two
 function isPowerOfTwo(n) {
   if (n < 1) {
     return false;
@@ -278,4 +278,32 @@ function isPowerOfTwo(n) {
     n /= 2;
   }
   return n == 1;
+}
+
+// 24 find caterer fro event
+function findCaterer(budget, people) {
+  let expense = budget / people;
+  if (people < 60) {
+    if (expense === 15) {
+      return 1;
+    } else if (expense === 20) {
+      return 2;
+    } else if (expense === 30) {
+      return 3;
+    } else {
+      return -1;
+    }
+  } else if (people >= 60 && people < 100) {
+    if (expense === 15) {
+      return 1;
+    } else if (expense === 20) {
+      return 2;
+    } else if (expense * 0.2 === 30) {
+      return 3;
+    } else {
+      return -1;
+    }
+  } else {
+    return -1;
+  }
 }

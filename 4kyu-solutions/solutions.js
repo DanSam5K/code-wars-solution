@@ -61,3 +61,14 @@ function exquisiteCorpse(part1, part2) {
   }
   return result;
 }
+
+// 5. Find the missing letter solution
+function findMissingLetter(array) {
+  let result = '';
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].charCodeAt() + 1 !== array[i + 1].charCodeAt()) {
+      result = String.fromCharCode(array[i].charCodeAt() + 1);
+    }
+  }
+  return result;
+}

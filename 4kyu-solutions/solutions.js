@@ -79,3 +79,18 @@ function findUniq(arr) {
   const sortedArr = arr.sort((a, b) => a - b);
   return sortedArr[0] === sortedArr[1] ? sortedArr.pop() : sortedArr[0];
 }
+
+// 7. Sum of pairs solution
+
+var sum_pairs = function (ints, s) {
+  //your code here
+  const set = new Set();
+  for (let i = 0; i < ints.length; i++) {
+    const current = ints[i];
+    const diff = s - current;
+    if (set.has(diff)) {
+      return [diff, current];
+    }
+    set.add(current);
+  }
+};

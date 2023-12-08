@@ -171,3 +171,12 @@ function numberOfPairs(gloves) {
 function findUniq(arr) {
   return arr.find((n) => arr.indexOf(n) === arr.lastIndexOf(n));
 }
+
+// 14. multiples of 3 and 5
+function solution(number) {
+  let sum = 0;
+  for (let i = 0; i < number; i++) {
+    sum += i % 3 === 0 || i % 5 === 0 ? i : 0;
+  }
+  return sum;
+}

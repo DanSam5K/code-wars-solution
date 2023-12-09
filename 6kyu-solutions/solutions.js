@@ -180,3 +180,8 @@ function solution(number) {
   }
   return sum;
 }
+
+// 15. Sum of odd numbers
+function rowSumOddNumbers(n) {
+  return Math.pow(n, 3);
+}

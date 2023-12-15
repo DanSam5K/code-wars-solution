@@ -30,6 +30,7 @@ function objectCharWord(word) {
   return charObject;
 }
 
+// find vowels solutions
 function anagram(word1, word2) {
   const firstWord = objectCharWord(word1);
   const secondWord = objectCharWord(word2);
@@ -59,3 +60,35 @@ function findVowels2() {
   const matched = str.match(/[aeiou]/gi);
   return matched ? matches.length : 0;
 }
+
+// fibonacci sequence
+
+// const fib = (num) => {
+//     // Check if num is already in the memo
+//     if (memo[num] !== undefined) {
+//       return memo[num];
+//     }
+
+//     // Base cases
+//     if (num < 2) {
+//       return num;
+//     }
+
+//     // Recursive case with memoization
+//     memo[num] = fib(num - 1) + fib(num - 2);
+//     return memo[num];
+//   };
+
+function fibonacci(num) {
+  const memo = {};
+  if (memo[num] !== undefined) {
+    return num;
+  }
+  if (num < 2) {
+    return num;
+  }
+  memo[num] = fibonacci(num - 1) + fibonacci(num - 2);
+  return memo[num];
+}
+
+console.log(fibonacci(9));

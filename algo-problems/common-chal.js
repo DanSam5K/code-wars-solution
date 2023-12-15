@@ -21,11 +21,12 @@ function fizzBuzz(n) {
 }
 
 //  anagram
-function objectCharWord(word1, word2) {
+function objectCharWord(word) {
   const charObject = {};
-  for (let char of word.replace(/[^\W]/g).toLowerCase()) {
+  for (let char of word.replace(/[^\w]/g, '').toLowerCase()) {
     charObject[char] = charObject[char] + 1 || 1;
   }
+  console.log(charObject);
   return charObject;
 }
 
@@ -41,4 +42,20 @@ function anagram(word1, word2) {
     }
   }
   return true;
+}
+
+function findVowels(str) {
+  let count = 0;
+  const vowels = ['a', 'e', 'i', '0', 'u'];
+  for (let char of str.toLowerCase()) {
+    if (vowels.includes(char)) {
+      count++;
+    }
+  }
+  return count;
+}
+
+function findVowels2() {
+  const matched = str.match(/[aeiou]/gi);
+  return matched ? matches.length : 0;
 }

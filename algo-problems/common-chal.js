@@ -19,3 +19,26 @@ function fizzBuzz(n) {
     }
   }
 }
+
+//  anagram
+function objectCharWord(word1, word2) {
+  const charObject = {};
+  for (let char of word.replace(/[^\W]/g).toLowerCase()) {
+    charObject[char] = charObject[char] + 1 || 1;
+  }
+  return charObject;
+}
+
+function anagram(word1, word2) {
+  const firstWord = objectCharWord(word1);
+  const secondWord = objectCharWord(word2);
+  if (Object.keys(firstWord).length !== Object.keys(secondWord).length) {
+    return false;
+  }
+  for (let char in firstWord) {
+    if (firstWord[char] !== secondWord[char]) {
+      return false;
+    }
+  }
+  return true;
+}

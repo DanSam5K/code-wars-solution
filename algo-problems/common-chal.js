@@ -61,24 +61,6 @@ function findVowels2() {
   return matched ? matches.length : 0;
 }
 
-// fibonacci sequence
-
-// const fib = (num) => {
-//     // Check if num is already in the memo
-//     if (memo[num] !== undefined) {
-//       return memo[num];
-//     }
-
-//     // Base cases
-//     if (num < 2) {
-//       return num;
-//     }
-
-//     // Recursive case with memoization
-//     memo[num] = fib(num - 1) + fib(num - 2);
-//     return memo[num];
-//   };
-
 function fibonacci(num) {
   const memo = {};
   if (memo[num] !== undefined) {

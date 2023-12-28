@@ -82,6 +82,12 @@ function repeatedString(s, n) {
   return reps * countA(s) + countA(s.substr(0, rest));
 }
 
-console.log(repeatedString('aba', 10));
-
 // String repeated
+function repeatStringNumTimes(str, num) {
+  let newStr = '';
+  while (num > 0) {
+    newStr += str;
+    num--;
+  }
+  return newStr;
+}

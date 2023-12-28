@@ -73,15 +73,15 @@ function fibonacci(num) {
   return memo[num];
 }
 
-console.log(fibonacci(9));
-
-// 2nd solution
-function fibonacci2(num) {
-  const result = [0, 1];
-  for (let i = 2; i <= num; i++) {
-    const prevNum1 = result[i - 1];
-    const prevNum2 = result[i - 2];
-    result.push(prevNum1 + prevNum2);
-  }
-  return result[num];
+// Repeated string
+function repeatedString(s, n) {
+  const countA = (str) => str.split('a').length - 1;
+  const len = s.length;
+  const reps = Math.floor(n / len);
+  const rest = n % len;
+  return reps * countA(s) + countA(s.substr(0, rest));
 }
+
+console.log(repeatedString('aba', 10));
+
+// String repeated

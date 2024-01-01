@@ -5,14 +5,17 @@ def double_digit_value(n):
         n = n - 9
     return n
 
-# check if the card number is valid
-def is_valid(card_number):
-    num = str(card_number)
-    total = 0
-    for i in range(len(num) - 1, -1, -1):
-        n = int(num[i])
-        if (len(num) - i) % 2 == 0:
-            total = total + double_digit_value(n)
+# checksum validation
+def is_valid(ccn):
+    ccn = str(ccn)
+    check_digit = ccn[-1]
+    ccn = ccn[:-1]
+    ccn = ccn[::-1]
+    doubled_digits = []
+    for i, digit in enumerate(ccn):
+        if i % 2 == 0:
+            doubled_digits.append(double_digit_value(int(digit)))
         else:
-            total = total + n
-    return total % 10 == 0
+            doubled_digits.append(int(digit))
+    total = sum(doubled_digits)
+    return total % 10 == int(check_digit)

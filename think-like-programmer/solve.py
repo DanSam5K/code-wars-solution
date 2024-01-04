@@ -19,3 +19,8 @@ def is_valid(ccn):
             doubled_digits.append(int(digit))
     total = sum(doubled_digits)
     return total % 10 == int(check_digit)
+  
+# test
+print(is_valid(4408041234567893))
+print(is_valid(4417123456789112))
+print(is_valid(1234567890123456))

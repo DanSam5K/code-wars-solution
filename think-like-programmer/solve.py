@@ -103,3 +103,11 @@ for i in range(4):
 def count_words(text):
     text = text.split()
     return len(text)
+
+def longest_word(text):
+    text = text.split()
+    longest = 0
+    for word in text:
+        if len(word) > longest:
+            longest = len(word)
+    return longest

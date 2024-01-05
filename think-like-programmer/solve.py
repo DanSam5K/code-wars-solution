@@ -111,3 +111,31 @@ def longest_word(text):
         if len(word) > longest:
             longest = len(word)
     return longest
+
+# Have you learned about hexadecimal? Try writing a program that lets the
+# user specify an input in binary, decimal, or hexadecimal, and output in any
+# of the three.
+
+def convert_base(num, base):
+    if base == 2:
+        return bin(num)
+    elif base == 16:
+        return hex(num)
+    else:
+        return num
+        
+# Write a program that reads a string and returns a table of the letters of the
+# alphabet in alphabetical order which occur in the string together with the
+# number of times each letter occurs. Case should be ignored. A sample output
+# of the program when the user enters the data “ThiS is String with Upper and lower case Letters”, would look this this:
+
+def count_letters(text):
+    text = text.lower()
+    text = text.replace(' ', '')
+    count = {}
+    for letter in text:
+        if letter in count:
+            count[letter] += 1
+        else:
+            count[letter] = 1
+    return count

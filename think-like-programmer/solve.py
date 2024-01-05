@@ -78,3 +78,28 @@ for i in range(len(data_input)):
  ##        ##
 #            #
 
+for i in range(4):
+    for j in range(i):
+        print(' ', end='')
+    print('#', end='')
+    for k in range(2 * (3 - i)):
+        print(' ', end='')
+    print('#', end='')
+    print()
+
+for i in range(4):
+    for j in range(3 - i):
+        print(' ', end='')
+    print('#', end='')
+    for k in range(2 * i + 2):
+        print(' ', end='')
+    print('#', end='')
+    print()
+
+# Write a program that reads a line of text, counting the number of words,
+# identifying the length of the longest word, the greatest number of vowels
+# in a word, and/or any other statistics you can think of.
+
+def count_words(text):
+    text = text.split()
+    return len(text)

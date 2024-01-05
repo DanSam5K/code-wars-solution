@@ -20,7 +20,61 @@ def is_valid(ccn):
     total = sum(doubled_digits)
     return total % 10 == int(check_digit)
   
-# test
-print(is_valid(4408041234567893))
-print(is_valid(4417123456789112))
-print(is_valid(1234567890123456))
+
+data_input = [["3-5"], [1, 'Alex', 2008, 'teddy bear'], [2, 'Tom', 2014, 'teddy bear', 'toy car'], [5, 'Ron', 2015, 'board game', 'book', 'skateboard', 'basketball', 'lego'], [4, 'Harry', 2005, 'basketball', 'skateboard', 'puzzle', 'book'], [1, 'Jack', 2012, 'bike'], [6, 'Ryan', 2001, 'lego', 'puzzle', 'football', 'teddy bear', 'toy car', 'hat'], [2, 'Kevin', 2020, 'sweater', 'teddy bear'], [3, 'Fred', 2016, 'toy car', 'lego', 'chess']];
+
+#  loop through the array get age between year between 2013 - 2017 slice the toys into a new set
+set_data = set()
+for i in range(len(data_input)):
+    if i > 0:
+        if data_input[i][2] >= 2013 and data_input[i][2] <= 2017:
+            for j in range(len(data_input[i])):
+                    set_data.add(data_input[i][j])
+
+# print(len(set_data), set_data) 
+
+# Using the same rule as the shapes programs from earlier in the chapter (only
+# two output statements—one that outputs the hash mark and one that outputs
+# an end-of-line), write a program that produces the following shape:
+  ########
+   ######
+    ####
+     ##
+# Hint: Recall that you can concatenate strings together using the + operator.
+# for i in range(4):
+#     for j in range(i):
+#         print(' ', end='')
+#     for k in range(8 - 2 * i):
+#         print('#', end='')
+#     print()
+
+    ##
+   ####
+  ######
+ ########
+ ########
+  ######
+   ####
+    ##
+# for i in range(4):
+#     for j in range(3 - i):
+#         print(' ', end='')
+#     for k in range(2 * i + 2):
+#         print('#', end='')
+#     print()
+# for i in range(4):
+#     for j in range(i + 1):
+#         print(' ', end='')
+#     for k in range(6 - 2 * i):
+#         print('#', end='')
+#     print()
+
+#             #
+ ##         ##
+  ###    ###
+   ########
+   ########
+  ###    ###
+ ##        ##
+#            #
+

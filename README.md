@@ -1,2 +1,1 @@
-# code-wars-solution
-Implementations of algorithm 
+#Code Wars Solutions

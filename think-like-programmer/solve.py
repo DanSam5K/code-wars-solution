@@ -139,3 +139,16 @@ def count_letters(text):
         else:
             count[letter] = 1
     return count
+
+# Write a program that reads a string and returns a table of the letters of the
+
+def count_letters(text):
+    text = text.lower()
+    text = text.replace(' ', '')
+    count = {}
+    for letter in text:
+        if letter in count:
+            count[letter] += 1
+        else:
+            count[letter] = 1
+    return count

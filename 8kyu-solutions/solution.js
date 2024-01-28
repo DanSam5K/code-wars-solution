@@ -13,18 +13,18 @@ const paperwork = (n, m) => {
 const bmi = (weight, height) => {
   let result = weight / Math.pow(height, 2);
   if (result <= 18.5) {
-    return "Underweight";
+    return 'Underweight';
   } else if (result <= 25.0) {
-    return "Normal";
+    return 'Normal';
   } else if (result <= 30.0) {
-    return "Overweight";
+    return 'Overweight';
   } else {
-    return "Obese";
+    return 'Obese';
   }
 };
 
 // 3. Vowel remover
-const shortcut = (string) => string.replace(/[aeiou]/g, "");
+const shortcut = (string) => string.replace(/[aeiou]/g, '');
 
 // 4. Student's Final Grade
 const finalGrade = (exam, projects) => {
@@ -63,7 +63,7 @@ function squareSum(numbers) {
 
 // 7. String repeat
 const repeatStr = (n, s) => {
-  let result = "";
+  let result = '';
   while (n > 0) {
     result += s;
     n--;
@@ -84,7 +84,7 @@ const twiceAsOld = (dadYearsOld, sonYearsOld) =>
   Math.abs(sonYearsOld * 2 - dadYearsOld);
 
 // 10. Sheep DNA to RNA conversion
-const DNAtoRNA = (dna) => dna.replace(/T/g, "U");
+const DNAtoRNA = (dna) => dna.replace(/T/g, 'U');
 
 // 11. GrassHoper Check for factor
 const checkForFactor = (base, factor) => (base % factor === 0 ? true : false);
@@ -124,23 +124,23 @@ const symmetricPoint = (p, q) => [2 * q[0] - p[0], 2 * q[1] - p[1]];
 // 18. Fake Binary
 function fakeBin(x) {
   let chars = {
-    0: "0",
-    1: "0",
-    2: "0",
-    3: "0",
-    4: "0",
-    5: "1",
-    6: "1",
-    7: "1",
-    8: "1",
-    9: "1",
+    0: '0',
+    1: '0',
+    2: '0',
+    3: '0',
+    4: '0',
+    5: '1',
+    6: '1',
+    7: '1',
+    8: '1',
+    9: '1',
   };
   x = x.replace(/[0-9]/g, (m) => chars[m]);
   return x;
 }
 
 function fakeBin2(x) {
-  return x.replace(/[0-4]/g, "0").replace(/[5-9]/g, "1");
+  return x.replace(/[0-4]/g, '0').replace(/[5-9]/g, '1');
 }
 
 // 19. Find the first non-consecutive number
@@ -198,12 +198,12 @@ function sumOfDifferences(arr) {
 // 24. I love you, a little , a lot, passionately ... not at all
 function howMuchILoveYou(nbPetals) {
   return [
-    "I love you",
-    "a little",
-    "a lot",
-    "passionately",
-    "madly",
-    "not at all",
+    'I love you',
+    'a little',
+    'a lot',
+    'passionately',
+    'madly',
+    'not at all',
   ][(nbPetals - 1) % 6];
 }
 
@@ -257,4 +257,9 @@ function countSheeps(arrayOfSheep) {
     }
   }
   return count;
+}
+
+// 32. Convert a string to an array
+function stringToArray(string) {
+  return string.split(' ');
 }

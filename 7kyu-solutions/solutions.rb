@@ -92,3 +92,9 @@ def get_middle(s)
   end
 end
 
+# 10. find the middle letter refactored
+def get_middle(s)
+  #your code here
+  s.size.even? ? s[s.size/2 - 1] + s[s.size/2] : s[s.size/2]
+end
+

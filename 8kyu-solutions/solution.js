@@ -233,33 +233,3 @@ function divisibleBy(numbers, divisor) {
   }
   return divisibleNum;
 }
-
-// 28. Wilson prime challenge
-function amIWilson(p) {
-  // check if prime is Wilson
-  return p == 5 || p == 13 || p == 563;
-}
-
-// 29. Sum of positive
-function positiveSum(arr) {}
-
-// 30. find out whether the shape is a cube
-var cubeChecker = function (volume, side) {
-  return volume === side ** 3;
-};
-
-// 31. counting sheep
-function countSheeps(arrayOfSheep) {
-  let count = 0;
-  for (let i = 0; i < arrayOfSheep.length; i++) {
-    if (arrayOfSheep[i] === true) {
-      count++;
-    }
-  }
-  return count;
-}
-
-// 32. Convert a string to an array
-function stringToArray(string) {
-  return string.split(' ');
-}

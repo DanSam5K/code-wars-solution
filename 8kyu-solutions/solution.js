@@ -233,3 +233,8 @@ function divisibleBy(numbers, divisor) {
   }
   return divisibleNum;
 }
+
+// 28. Convert a string to an array
+function stringToArray(string) {
+  return string.split(' ');
+}

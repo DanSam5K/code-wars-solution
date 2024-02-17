@@ -233,3 +233,10 @@ function divisibleBy(numbers, divisor) {
   }
   return divisibleNum;
 }
+
+// 28. Remove the minimum
+function removeSmallest(numbers) {
+  let min = Math.min(...numbers);
+  let index = numbers.indexOf(min);
+  return [...numbers.slice(0, index), ...numbers.slice(index + 1)];
+}

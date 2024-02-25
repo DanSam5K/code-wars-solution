@@ -68,3 +68,31 @@ var spaghetti = function (plate) {
   }
   return result;
 };
+
+var spaghetti = function (plate) {
+  // find the longest character
+  let longest = {};
+  for (let i = 0; i < plate.length; i++) {
+    let count = 0;
+    for (let j = 0; j < plate[i].length; j++) {
+      if (plate[i][j] !== '_') {
+        count++;
+      }
+    }
+    longest[i] = count;
+  }
+  let longestKey = Object.keys(longest).reduce((a, b) =>
+    longest[a] > longest[b] ? a : b
+  );
+  let longestValue = longest[longestKey];
+  // find the longest character
+  let result = [];
+  for (let i = 0; i < longestValue; i++) {
+    let temp = [];
+    for (let j = 0; j < plate.length; j++) {
+      temp.push(plate[j][i]);
+    }
+    result.push(temp);
+  }
+  return result;
+};
